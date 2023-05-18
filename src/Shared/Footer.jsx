@@ -43,7 +43,7 @@ const Footer = () => {
                 </div>
             </footer>
             <hr className='h-1 rounded border-0 w-10/12 mx-auto bg-gray-500' />
-            <p className='text-center pb-1'>Copyright © 2023 Toy Connection  </p>
+            <p className='text-center pb-1'>Copyright © 2023 AquaLeapToy & Co. Ltd</p>
         </div>
             );
 };
