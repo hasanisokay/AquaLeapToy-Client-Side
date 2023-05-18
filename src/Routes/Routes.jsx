@@ -11,6 +11,7 @@ import AllToys from '../Pages/AllToys';
 import AddAToy from '../Pages/AddAToy';
 import Profile from '../Pages/Profile';
 import PrivateRoute from './PrivateRoute';
+import ErrorPage from '../Pages/ErrorPage';
 
 
 
@@ -20,6 +21,7 @@ export const router = createBrowserRouter([
     {
         path:"/",
         element: <Home></Home>,
+        errorElement: <ErrorPage></ErrorPage> ,
         children:[
             {
                 path:"/",
