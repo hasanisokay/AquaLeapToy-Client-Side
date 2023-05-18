@@ -6,6 +6,11 @@ import Login from '../Pages/Login';
 import SignUp from '../Pages/SignUp';
 import AboutUs from '../Pages/AboutUs';
 import Blog from '../Pages/Blog';
+import MyToys from '../Pages/MyToys';
+import AllToys from '../Pages/AllToys';
+import AddAToy from '../Pages/AddAToy';
+import Profile from '../Pages/Profile';
+import PrivateRoute from './PrivateRoute';
 
 
 
@@ -35,6 +40,22 @@ export const router = createBrowserRouter([
             {
                 path:'blog',
                 element: <Blog></Blog>
+            },
+            {
+                path:"my-toys",
+                element: <PrivateRoute><MyToys></MyToys></PrivateRoute>
+            },
+            {
+                path: "all-toys",
+                element: <AllToys></AllToys>
+            },
+            {
+                path: "add-toy",
+                element: <PrivateRoute><AddAToy></AddAToy></PrivateRoute>
+            },
+            {
+                path: "profile",
+                element: <PrivateRoute><Profile></Profile></PrivateRoute>
             }
         ]
     }
