@@ -5,16 +5,16 @@ const Profile = () => {
     const { user } = useContext(AuthContext);
     console.log(user);
     return (
-        <div className="card lg:w-1/2 w-11/12 shadow-xl my-8 mx-auto">
-        <figure><img src={user.photoURL} className='w-1/2 rounded-full' alt="profile photo" /></figure>
-        <div className="card-body text-center text-xl font-medium">
-          <h2 className="">Name: {user.displayName}</h2>
-          <p>Email: {user.email}</p>
-          <p>Email Varified: {user.emailVerified ? "Yes" : "No" }</p>
-          <p>Phone Number: {user.phoneNumber ? user.phoneNumber  : "Not Given" }</p>
-          <button className='btn'>Verify your Email</button>
+        <div className="lg:flex-row items-center justify-center flex flex-col gap-10 mx-10 my-10">
+            <div className='text-xl'>
+                <h2>Name: <span className='font-semibold'>{user.displayName}</span> </h2>
+                <p>Email: <span className='font-medium'>{user.email}</span> </p>
+                <p>Email Varified: <span className='font-medium'>{user.emailVerified ? "Yes" : "No"}</span></p>
+                <p>Phone Number: <span className='font-medium'>{user.phoneNumber ? user.phoneNumber : "Not Given"}</span></p>
+                <button className='btn mt-8'>Verify your Email</button>
+            </div>
+           <div> <img src={user.photoURL} className=' h-80 rounded' alt="profile photo" /></div>
         </div>
-      </div> 
     );
 };
 
