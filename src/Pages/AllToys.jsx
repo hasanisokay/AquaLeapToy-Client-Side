@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import Lottie from "lottie-react";
 import loadingJson from "../assets/jsonLottieFiles/loading.json"
+import { useNavigate } from 'react-router-dom';
 const AllToys = () => {
     const { loading, setLoading } = useContext(AuthContext);
     const [allToys, setAllToys] = useState([]);
@@ -11,7 +12,7 @@ const AllToys = () => {
     const [totalToys, setTotalToys] = useState(1)
     let totalPages = Math.ceil(totalToys / toysPerPage)
     let pageNumbers = [...Array(totalPages ? totalPages : 20).keys()] || 2;
-
+    const navigate = useNavigate()
     const handleSearch = (e) => {
         e.preventDefault()
         const searchText = e.target.search.value
@@ -22,6 +23,9 @@ const AllToys = () => {
                 setAllToys(data)
                 setTotalFound(data.length)
             })
+    }
+    const handleToyDetails = (id)=>{
+        navigate(`/toy-details/${id}`)
     }
     const handleSelectToysPerPage = e => {
         setToysPerPage(e.target.value);
@@ -80,12 +84,12 @@ const AllToys = () => {
                     <div className="card-body">
                         <h2>Name: {toy.toyName}</h2>
                         <h2>Seller: {toy.sellerName}</h2>
-                        <p>Description:{toy.description}</p>
-                        <p>Price:{toy.price}</p>
+                        <p>Description: {toy.description}</p>
+                        <p>Price: &{toy.price}</p>
                         <p>Available Quantity: {toy.quantity}</p>
                         <p>Rating: {toy.rating}</p>
                         <div className="card-actions justify-end">
-                            <button className="btn bg-orange-400 border-0 ">View Details</button>
+                            <button className="btn bg-orange-400 border-0 " onClick={()=>handleToyDetails(toy._id)}>View Details</button>
                         </div>
                     </div>
                 </div>)

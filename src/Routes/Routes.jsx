@@ -12,6 +12,7 @@ import AddAToy from '../Pages/AddAToy';
 import Profile from '../Pages/Profile';
 import PrivateRoute from './PrivateRoute';
 import ErrorPage from '../Pages/ErrorPage';
+import ToyDetails from '../Pages/ToyDetails';
 
 
 
@@ -58,6 +59,10 @@ export const router = createBrowserRouter([
             {
                 path: "profile",
                 element: <PrivateRoute><Profile></Profile></PrivateRoute>
+            },
+            {
+                path: "toy-details/:id",
+                element: <PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>
             }
         ]
     }
