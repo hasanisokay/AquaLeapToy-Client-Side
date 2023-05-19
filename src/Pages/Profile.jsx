@@ -23,7 +23,6 @@ const Profile = () => {
 
         })
     }
-    console.log(user);
     return (
         <div className="lg:flex-row items-center justify-center flex flex-col gap-10 mx-10 my-10">
             <div className='text-xl'>

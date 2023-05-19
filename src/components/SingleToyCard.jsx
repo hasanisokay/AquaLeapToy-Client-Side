@@ -92,7 +92,7 @@ const SingleToyCard = ({ toy, setDeleted, deleted }) => {
                         <p>Rating: <span className='font-medium'>{rating}</span></p>
                     </div>
                     <div className='flex flex-col gap-4 items-center justify-center'>
-                        <label htmlFor="my-modal-6" className='btn btn-sm bg-[#5dbea3] hover:bg-cyan-500 border-0'>Edit</label>
+                        <label htmlFor="my-modal-6" className='btn btn-sm bg-[#5dbea3] hover:bg-cyan-500 border-0'>Update</label>
                         <button onClick={() => handleDelete(_id)} className='btn btn-sm bg-[#ffbd03] border-0 hover:bg-red-500'>Delete</button>
 
                     </div>
