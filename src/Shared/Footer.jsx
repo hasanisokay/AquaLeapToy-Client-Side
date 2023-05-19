@@ -24,9 +24,9 @@ const Footer = () => {
                         <AiOutlineHome />
                         <p>
                             Pragati Insurance Bhaban, Karwan Bazar Dhaka 1215, Bangladesh <br />
-                            Office: 02 8180078-81, 02 55012201-09 <br />
-                            Advertisement: 02 55012212 <br />
-                            Fax: 02 55012200, 02 55012211 </p>
+                            Office: 02 0032131230-00, 02 0032131200-09 <br />
+                            Advertisement: 02 000323000 <br />
+                            Fax: 02 500041210, 02 0000321321 </p>
                     </div>
                 </div>
                 <div className='h-full w-full'>

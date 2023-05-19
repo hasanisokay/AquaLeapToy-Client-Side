@@ -88,7 +88,7 @@ const Gallery = () => {
                     </div>
                 </div>
             </div>
-            <div className='text-center mb-4'><Link to={"/"} className='btn bg-orange-400 border-0 hover:bg-slate-500'>See All Toys</Link></div>
+            <div className='text-center mb-4'><Link to={"/all-toys"} className='btn bg-orange-400 border-0 hover:bg-slate-500'>See All Toys</Link></div>
         </div>
     );
 };

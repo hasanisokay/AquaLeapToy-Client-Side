@@ -48,9 +48,6 @@ const AddAToy = () => {
     
             }
         })
-
-
-
     }
 
     return (
@@ -62,25 +59,25 @@ const AddAToy = () => {
                     <label className="label">
                         <span className="label-text">Name Of the Toy</span>
                     </label>
-                    <input type="text" name='toyName' placeholder="Toy Name" className="input input-bordered" />
+                    <input type="text" name='toyName' placeholder="Toy Name" required className="input input-bordered" />
                 </div>
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text">Toy Photo URL</span>
                     </label>
-                    <input type="url" name='photoURL' placeholder="Photo URL" className="input input-bordered" />
+                    <input type="url" name='photoURL' placeholder="Photo URL" required className="input input-bordered" />
                 </div>
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text">Seller Name</span>
                     </label>
-                    <input type="text" name='sellerName' placeholder="Seller" defaultValue={user.displayName} className="input input-bordered" />
+                    <input type="text" name='sellerName' placeholder="Seller" required defaultValue={user.displayName} className="input input-bordered" />
                 </div>
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text">Email</span>
                     </label>
-                    <input type="email" name='email' placeholder="Email" defaultValue={user.email} className="input input-bordered" />
+                    <input type="email" name='email' placeholder="Email" required defaultValue={user.email} className="input input-bordered" />
                 </div>
                 <div>
                 <label className="label">
@@ -98,25 +95,25 @@ const AddAToy = () => {
                     <label className="label">
                         <span className="label-text">Price</span>
                     </label>
-                    <input type="number" name='price' placeholder="Price" className="input input-bordered" />
+                    <input type="number" name='price' placeholder="Price" required className="input input-bordered" />
                 </div>
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text">Rating</span>
                     </label>
-                    <input type="number" name='rating' placeholder="Rating" className="input input-bordered" />
+                    <input type="number" name='rating' placeholder="Rating" required className="input input-bordered" />
                 </div>
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text">Available Quantity</span>
                     </label>
-                    <input type="number" name='quantity' placeholder="Available Quantity" className="input input-bordered" />
+                    <input type="number" name='quantity' placeholder="Available Quantity" required className="input input-bordered" />
                 </div>
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text">Description</span>
                     </label>
-                    <input type="text" name='description' placeholder="Description" className="input input-bordered" />
+                    <input type="text" name='description' placeholder="Description" required className="input input-bordered" />
                 </div>
                 <div className='mt-4'>
                 <input type="submit" value="Add Toy" className='btn' />
