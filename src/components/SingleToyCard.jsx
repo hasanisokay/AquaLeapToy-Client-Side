@@ -9,21 +9,29 @@ const SingleToyCard = ({ toy, setDeleted, deleted }) => {
     const [updatedToyName, setUpdatedToyName] = useState(toyName)
     const [updatedPhotoURL, setUpdatedPhotoURL] = useState(photoURL)
     const [updatedSellerName, setUpdatedSellerName] = useState(sellerName)
-    const [updatedEmail, setUpdatedEmail] = useState(email)
     const [updatedPrice, setUpdatedPrice] = useState(price)
     const [updatedRating, setUpdatedRating] = useState(rating)
     const [updatedQuantity, setUpdatedQuantity] = useState(quantity)
     const [updatedDescription, setUpdatedDescription] = useState(description)
-    // updated toy
-    const [updatedToy, setUpdatedToy] = useState({});
-    const handleEdit = (id) => {
-        const updatedValue = { toyName:updatedToyName, photoURL:updatedPhotoURL, sellerName:updatedSellerName, email:updatedEmail, price:updatedPrice, rating:updatedRating, quantity:updatedQuantity, description:updatedDescription,}
-        
-        updatedValue.category = selectedOption.map(o=>o.value)
-        
-        setUpdatedToy(updatedValue);
 
-        console.log(updatedToy);
+    const handleEdit = (id) => {
+        const newCategory = selectedOption?.map(o=>o.value) || [];
+        const updatedValue = { toyName:updatedToyName, photoURL:updatedPhotoURL, sellerName:updatedSellerName, price:updatedPrice, rating:updatedRating, quantity:updatedQuantity, description:updatedDescription, category: newCategory };
+        
+        fetch(`http://localhost:5000/updateToys/${id}`,{
+            method:"PATCH",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body: JSON.stringify(updatedValue)
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            if(data.modifiedCount > 0){
+                setDeleted(!deleted)
+            }
+            console.log(data);
+        })
  
     }
     const handleDelete = (id) => {
@@ -116,7 +124,7 @@ const SingleToyCard = ({ toy, setDeleted, deleted }) => {
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input type="email" name='email' placeholder="Email" disabled onChange={(e)=>setUpdatedEmail(e.target.value)} required defaultValue={email} className="input input-bordered" />
+                            <input type="email" name='email' placeholder="Email" disabled defaultValue={email} className="input input-bordered" />
                         </div>
                         <div>
                             <label className="label">
