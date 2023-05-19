@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import CreatableSelect from "react-select/creatable";
+import Swal from 'sweetalert2';
 
 const AddAToy = () => {
     const { user } = useContext(AuthContext);
@@ -29,7 +30,27 @@ const AddAToy = () => {
         const time = new Date()
         const category = selectedOption.map(select=>select.value)
         const input = { toyName, photoURL, sellerName, email, price, rating, quantity, description, time, category }
-        console.log(input);
+       
+
+        fetch("http://localhost:5000/addAToy",{
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(input)
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            if(data.insertedId){
+                Swal.fire(
+                    'Toy Added',
+                    'Your Toy has been added successfully.',
+                    'success'
+                  )
+    
+            }
+        })
+
+
+
     }
 
     return (
