@@ -21,6 +21,7 @@ const MyToys = () => {
     },[deleted])
     return (
         <div >
+            <h1 className='text-2xl text-center'>Added Toys: {myToys.length}</h1>
             {myToys.map(toy=><SingleToyCard toy={toy} deleted={deleted} setDeleted={setDeleted} key={toy._id}/>)}            
         </div>
     );
