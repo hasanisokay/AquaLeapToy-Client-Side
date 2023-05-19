@@ -4,6 +4,7 @@ import { FaFacebook, FaGoogle } from "react-icons/fa";
 import Swal from 'sweetalert2';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 const SignUp = () => {
+    document.title = "AquaLeapToy | SignUp"
 
     const location = useLocation()
     const { register, setProfile, withFacebook, withGoogle } = useContext(AuthContext)

@@ -3,6 +3,7 @@ import { AuthContext } from '../AuthProvider/AuthProvider';
 import Swal from 'sweetalert2';
 
 const Profile = () => {
+    document.title = "AquaLeapToy | Profile"
     const { user, varifyEmail } = useContext(AuthContext);
     const handleVarifyEmail = ()=>{
         varifyEmail()

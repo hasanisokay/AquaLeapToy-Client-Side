@@ -6,6 +6,7 @@ import loadingJson from "../assets/jsonLottieFiles/loading.json"
 
 
 const MyToys = () => {
+    document.title = "AquaLeapToy | MyToys"
     const {user} = useContext(AuthContext);
     const email = user.email;
     const [deleted, setDeleted] = useState(false);

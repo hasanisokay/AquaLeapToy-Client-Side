@@ -4,6 +4,7 @@ import CreatableSelect from "react-select/creatable";
 import Swal from 'sweetalert2';
 
 const AddAToy = () => {
+    document.title = "AquaLeapToy | AddAToy"
     const { user } = useContext(AuthContext);
     const [selectedOption, setSelectedOption] = useState(null);
     const options = [

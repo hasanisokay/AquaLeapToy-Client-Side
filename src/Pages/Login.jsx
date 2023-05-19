@@ -44,6 +44,7 @@ const Login = () => {
     }
 
     const handleLogin = e => {
+        document.title = "AquaLeapToy | Login"
         e.preventDefault()
         const form = e.target
         const email = form.email.value

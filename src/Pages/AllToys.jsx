@@ -4,6 +4,7 @@ import Lottie from "lottie-react";
 import loadingJson from "../assets/jsonLottieFiles/loading.json"
 import { useNavigate } from 'react-router-dom';
 const AllToys = () => {
+    document.title = "AquaLeapToy | AllToys"
     const { loading, setLoading } = useContext(AuthContext);
     const [allToys, setAllToys] = useState([]);
     const [totalFound, setTotalFound] = useState(-1)

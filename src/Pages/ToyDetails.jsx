@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import Lottie from "lottie-react";
 import loadingJson from "../assets/jsonLottieFiles/loading.json"
 const ToyDetails = () => {
+    document.title = "AquaLeapToy | ToyDetails"
     const { id } = useParams()
     const [toy, setToy] = useState({})
     const [load, setLoad] = useState(false)
@@ -11,7 +12,7 @@ const ToyDetails = () => {
         fetch(`http://localhost:5000/toy/${id}`)
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+
                 setToy(data)
                 setLoad(false)
             })

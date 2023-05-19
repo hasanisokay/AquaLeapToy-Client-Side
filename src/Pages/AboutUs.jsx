@@ -1,6 +1,7 @@
 import React from 'react';
 
 const AboutUs = () => {
+    document.title = "AquaLeapToy | AboutUs"
     return (
         <div>
             <h1>About us</h1>
