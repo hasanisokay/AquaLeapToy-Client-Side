@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import { Navigate, useLocation } from 'react-router-dom';
 import Lottie from "lottie-react";
-import loadingJson from "../../public/loading.json"
+import loadingJson from "../assets/jsonLottieFiles/loading.json"
 
 
 const PrivateRoute = ({children}) => {

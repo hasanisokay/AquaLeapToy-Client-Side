@@ -21,7 +21,7 @@ const Homepage = () => {
     const swiperParams = {
         // Swiper options here
         autoplay: {
-            delay: 30000, // Delay between slides in milliseconds
+            delay: 3000, // Delay between slides in milliseconds
             disableOnInteraction: false, // Continue autoplay after user interaction
         },
     };
