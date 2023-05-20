@@ -33,7 +33,7 @@ const AddAToy = () => {
         const input = { toyName, photoURL, sellerName, email, price, rating, quantity, description, time, category }
        
 
-        fetch("http://localhost:5000/addAToy",{
+        fetch("https://toy-market-server-8mjxd70mo-hasanisokay.vercel.app/addAToy",{
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(input)

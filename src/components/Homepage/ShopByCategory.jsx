@@ -18,7 +18,7 @@ const ShopByCategory = ({user}) => {
         navigate(`/toy-details/${id}`)
     }
     useEffect(() => {
-        fetch(`http://localhost:5000/category/${activeTab}`)
+        fetch(`https://toy-market-server-8mjxd70mo-hasanisokay.vercel.app/category/${activeTab}`)
             .then(res => res.json())
             .then(data => setToys(data))
     }, [activeTab])

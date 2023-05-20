@@ -68,7 +68,7 @@ export const router = createBrowserRouter([
             {
                 path: "update-toy/:id",
                 element: <PrivateRoute><UpdateToy></UpdateToy></PrivateRoute>,
-                loader: ({params})=>fetch(`http://localhost:5000/toy/${params.id}`)
+                loader: ({params})=>fetch(`https://toy-market-server-8mjxd70mo-hasanisokay.vercel.app/toy/${params.id}`)
             }
         ]
     }

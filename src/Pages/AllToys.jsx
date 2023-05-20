@@ -18,7 +18,7 @@ const AllToys = () => {
         e.preventDefault()
         const searchText = e.target.search.value
         console.log(searchText);
-        fetch(`http://localhost:5000/toys/${searchText}`)
+        fetch(`https://toy-market-server-8mjxd70mo-hasanisokay.vercel.app/toys/${searchText}`)
             .then(res => res.json())
             .then(data => {
                 setAllToys(data)
@@ -34,7 +34,7 @@ const AllToys = () => {
     }
     useEffect(() => {
         setLoading(true)
-        fetch(`http://localhost:5000/totalToys`)
+        fetch(`https://toy-market-server-8mjxd70mo-hasanisokay.vercel.app/totalToys`)
             .then(res => res.json())
             .then(data => {
                 setTotalToys(data.result)
@@ -44,7 +44,7 @@ const AllToys = () => {
 
     useEffect(() => {
         setLoading(true)
-        fetch(`http://localhost:5000/toys?page=${currentPage}&limit=${toysPerPage}`)
+        fetch(`https://toy-market-server-8mjxd70mo-hasanisokay.vercel.app/toys?page=${currentPage}&limit=${toysPerPage}`)
             .then(res => res.json())
             .then(data => {
                 setAllToys(data)
@@ -55,7 +55,7 @@ const AllToys = () => {
 
 
     // useEffect(() => {
-    //     fetch("http://localhost:5000/allToys")
+    //     fetch("https://toy-market-server-8mjxd70mo-hasanisokay.vercel.app/allToys")
     //         .then(res => res.json())
     //         .then(data => setAllToys(data))
     // }, [])
@@ -114,7 +114,7 @@ const AllToys = () => {
                 <div className='text-center my-4'>
                     {
                         pageNumbers?.map(number => <button className={
-                            (currentPage === number ? "bg-yellow-500 btn ml-4 btn-circle hover:bg-blue-500 border-0 w-12 h-12" : "btn-circle w-12 h-12 btn border-0 ml-4")}
+                            (currentPage === number ? "bg-yellow-500 btn ml-4 hover:bg-blue-500 border-0 w-12 h-12" : "w-12 h-12 btn border-0 ml-4")}
                             onClick={() => setCurrentPage(number)}
                             key={number}>{number}</button>)
                     }

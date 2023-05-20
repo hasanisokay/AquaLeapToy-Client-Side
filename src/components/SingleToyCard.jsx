@@ -32,7 +32,7 @@ const SingleToyCard = ({ toy, setDeleted, deleted }) => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/myToys/${id}`, {
+                fetch(`https://toy-market-server-8mjxd70mo-hasanisokay.vercel.app/myToys/${id}`, {
                     method: "DELETE",
                     headers: {
                         "Content-Type": "application/json"
