@@ -24,7 +24,7 @@ const ShopByCategory = ({user}) => {
     }, [activeTab])
     return (
         <div>
-            <h1 className='text-lg text-center'>Shop By Category</h1>
+            <h1 className="font-semibold text-2xl text-transparent text-center bg-clip-text bg-gradient-to-r from-slate-600 to-orange-600 to-4%">Shop By Category</h1>
             <div className='text-center my-4'>
                 <button className={` p-3 w-40 rounded-tl-lg rounded-bl-lg transition-colors duration-700 border-r ${activeTab === "Pretend Play" ? 'bg-[#BAD1C2] font-semibold' : 'bg-zinc-400'} `} onClick={() => setActiveTab("Pretend Play")}>Pretend Play Toys</button>
                 <button className={` p-3 w-40  transition-colors duration-700 border-r ${activeTab === "Educational" ? 'bg-[#BAD1C2] font-semibold ' : 'bg-zinc-400'} `} onClick={() => setActiveTab("Educational")} >Educational Toys</button>

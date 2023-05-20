@@ -52,8 +52,6 @@ const AllToys = () => {
             })
     }, [currentPage, toysPerPage])
 
-
-
     // useEffect(() => {
     //     fetch("https://toy-market-server-8mjxd70mo-hasanisokay.vercel.app/allToys")
     //         .then(res => res.json())

@@ -18,6 +18,7 @@ import { Link } from 'react-router-dom';
 import Gallery from './Gallery';
 import ShopByCategory from './ShopByCategory';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import ToyGuides from '../../Pages/ToyGuides';
 
 const Homepage = () => {
     const {user} = useContext(AuthContext);
@@ -141,6 +142,7 @@ const Homepage = () => {
             {/* Toy Gallery Section */}
             <Gallery></Gallery>
             <ShopByCategory user={user}></ShopByCategory>
+            <ToyGuides></ToyGuides>
         </>
     );
 };

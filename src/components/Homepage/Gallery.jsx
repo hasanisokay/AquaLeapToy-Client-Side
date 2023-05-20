@@ -15,10 +15,12 @@ const Gallery = () => {
     AOS.init({
         duration: 2000,
         delay: 100,
+        easing: 'ease-in-sine',
+        
       })
     return (
         <div className='mx-4'>
-            <h1 className='text-center my-4 text-orange-600 text-2xl font-medium'>Featured Toy Gallery</h1>
+            <h1 className='font-semibold text-2xl text-transparent text-center bg-clip-text bg-gradient-to-r from-cyan-800 via-orange-700 to-red-950'>Featured Toy Gallery</h1>
             <p className='text-slate-800 w-5/6 mx-auto'>Step into our captivating Toy Gallery, a visual extravaganza that showcases a stunning collection of toys from various genres and eras. Immerse yourself in a wonderland of play, where imagination knows no bounds. Discover meticulously crafted action figures, enchanting dolls, intricate playsets, and more, each telling its own unique story.</p>
             <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-1 gap-4'>
                 <div data-aos="fade-up-right" className="card mx-auto w-96 bg-base-100 shadow-xl my-4">
@@ -29,7 +31,7 @@ const Gallery = () => {
                         </h2>
                     </div>
                 </div>
-                <div data-aos="zoom-in-right" className="card  mx-auto w-96 bg-base-100 shadow-xl my-4">
+                <div data-aos="zoom-out-left" className="card  mx-auto w-96 bg-base-100 shadow-xl my-4">
                     <figure><img src={toy2}alt="toy" className='h-72 w-full' /></figure>
                     <div className="card-body">
                         <h2 className="card-title">
@@ -37,7 +39,7 @@ const Gallery = () => {
                         </h2>
                     </div>
                 </div>
-                <div data-aos="zoom-out-right" className="card w-96  mx-auto bg-base-100 shadow-xl my-4">
+                <div data-aos="zoom-out-up" className="card w-96  mx-auto bg-base-100 shadow-xl my-4">
                     <figure><img src={toy3}alt="toy" className='h-72 w-full' /></figure>
                     <div className="card-body">
                         <h2 className="card-title">
@@ -85,7 +87,7 @@ const Gallery = () => {
                         </h2>
                     </div>
                 </div>
-                <div data-aos="fade-down-left" className="card w-96  mx-auto bg-base-100 shadow-xl my-4">
+                <div data-aos="zoom-in-left" className="card w-96  mx-auto bg-base-100 shadow-xl my-4">
                     <figure><img src={toy9}alt="toy" className='h-72 w-full' /></figure>
                     <div className="card-body">
                         <h2 className="card-title">
