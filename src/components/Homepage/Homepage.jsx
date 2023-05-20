@@ -19,6 +19,7 @@ import Gallery from './Gallery';
 import ShopByCategory from './ShopByCategory';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import ToyGuides from '../../Pages/ToyGuides';
+import CustomerReview from '../../Pages/CustomerReview';
 
 const Homepage = () => {
     const {user} = useContext(AuthContext);
@@ -51,11 +52,8 @@ const Homepage = () => {
                                 </div>
                             </div>
                         </SwiperSlide>
-
-
-
+                        
                         <SwiperSlide>
-
                             <div className='relative w-full h-full'>
                                 <img src={banner2} alt="" className='w-full h-56 md:h-72 lg:h-96' />
                                 <div className="absolute text-center pt-8 top-0 w-full text-white h-full bg-gradient-to-r from-[#160505] to-[rgba(21,21,21,0)]">
@@ -143,6 +141,7 @@ const Homepage = () => {
             <Gallery></Gallery>
             <ShopByCategory user={user}></ShopByCategory>
             <ToyGuides></ToyGuides>
+            <CustomerReview></CustomerReview>
         </>
     );
 };
