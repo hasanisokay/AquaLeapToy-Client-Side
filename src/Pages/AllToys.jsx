@@ -25,7 +25,7 @@ const AllToys = () => {
                 setTotalFound(data.length)
             })
     }
-    const handleToyDetails = (id)=>{
+    const handleToyDetails = (id) => {
         navigate(`/toy-details/${id}`)
     }
     const handleSelectToysPerPage = e => {
@@ -79,20 +79,24 @@ const AllToys = () => {
                     <p className='text-lg ml-10'>Total Search Result: <span className='font-bold'>{totalFound}</span> </p>
                 )
             }
-            <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 lg:my-8 my-6 lg:mx-8 mx-4 '>
-                {allToys.map(toy => <div key={toy._id} className="card card-compact w-96 bg-base-100 shadow-xl">
-                    <img src={toy.photoURL} alt="toy" className='w-full h-60 rounded' />
-                    <div className="card-body">
-                        <h2>Name: {toy.toyName}</h2>
-                        <h2>Seller: {toy.sellerName}</h2>
-                        <p>Description: {toy.description}</p>
-                        <p>Price: &{toy.price}</p>
-                        <p>Available Quantity: {toy.quantity}</p>
-                        <p>Rating: {toy.rating}</p>
-                        <div className="card-actions justify-end">
-                            <button className="btn bg-orange-400 border-0 " onClick={()=>handleToyDetails(toy._id)}>View Details</button>
+            <div className='lg:my-8 my-6 lg:mx-8 mx-4 '>
+                {allToys.map(toy => <div key={toy._id} className="flex py-4 items-center justify-evenly gap-6 shadow-xl mx-auto my-2">
+                    <div > <img src={toy.photoURL} alt="toy" className='h-40 w-96 rounded' /></div>
+                    <div className='flex gap-6 mx-10 items-center'>
+                        <div>
+                            <h2>Name: <span className='font-medium'>{toy.toyName}</span></h2>
+                            <h2>Seller: <span className='font-medium'>{toy.sellerName}</span></h2>
+                            <p>Price: $<span className='font-medium'>{toy.price}</span></p>
+                            <p>Available Quantity: <span className='font-medium'>{toy.quantity}</span></p>
+                            <p>Rating: <span className='font-medium'>{toy.rating}</span></p>
+                            <p>Category: {toy.category?.map((t, idx) => <span className='mr-1 font-medium' key={idx}>{t}</span>)} </p>
+                            <p className='w-[90%]'>{toy.description}</p>
+                        </div>
+                        <div>
+                            <button className="btn bg-orange-400 border-0 " onClick={() => handleToyDetails(toy._id)}>View Details</button>
                         </div>
                     </div>
+
                 </div>)
                 }
             </div>

@@ -31,12 +31,14 @@ const ToyDetails = () => {
                 <div className="">
                     <h2>Toy Name: {toy.toyName}</h2>
                     <h2>Seller: {toy.sellerName}</h2>
+                    <h2>Seller Email: {toy.email}</h2>
                     <p>Description: {toy.description}</p>
                     <p>Price: ${toy.price}</p>
                     <p>Available Quantity: {toy.quantity}</p>
                     <p>Rating: {toy.rating}</p>
                 </div>
             </div>
+            {/* picture, toy name, seller name, seller email, price, rating, available quantity, and detail description) */}
         </div>
     );
 };
