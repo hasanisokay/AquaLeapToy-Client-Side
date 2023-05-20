@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Autoplay, EffectCube, EffectFade } from 'swiper';
 SwiperCore.use([Autoplay]);
@@ -16,8 +16,11 @@ import banner8 from "../../assets/banner/banner8.jpg"
 import banner9 from "../../assets/banner/banner9.jpg"
 import { Link } from 'react-router-dom';
 import Gallery from './Gallery';
+import ShopByCategory from './ShopByCategory';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Homepage = () => {
+    const {user} = useContext(AuthContext);
     const swiperParams = {
         // Swiper options here
         autoplay: {
@@ -137,6 +140,7 @@ const Homepage = () => {
             </div>
             {/* Toy Gallery Section */}
             <Gallery></Gallery>
+            <ShopByCategory user={user}></ShopByCategory>
         </>
     );
 };

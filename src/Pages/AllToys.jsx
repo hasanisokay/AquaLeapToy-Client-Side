@@ -80,9 +80,9 @@ const AllToys = () => {
                 )
             }
             <div className='lg:my-8 my-6 lg:mx-8 mx-4 '>
-                {allToys.map(toy => <div key={toy._id} className="flex py-4 items-center justify-evenly gap-6 shadow-xl mx-auto my-2">
-                    <div > <img src={toy.photoURL} alt="toy" className='h-40 w-96 rounded' /></div>
-                    <div className='flex gap-6 mx-10 items-center'>
+                {allToys.map(toy => <div key={toy._id} className="flex lg:flex-row flex-col  py-4 items-center  gap-6 shadow-xl mx-auto w-[90%] my-2">
+                    <img src={toy.photoURL} alt="toy" className='h-[200px] w-40 rounded' />
+                    <div className='flex mx-10 lg:flex-row flex-col gap-4 items-center'>
                         <div>
                             <h2>Name: <span className='font-medium'>{toy.toyName}</span></h2>
                             <h2>Seller: <span className='font-medium'>{toy.sellerName}</span></h2>
