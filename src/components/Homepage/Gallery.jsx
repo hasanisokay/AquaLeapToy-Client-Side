@@ -9,13 +9,19 @@ import toy7 from "../../assets/toys/toy7.jpg"
 import toy8 from "../../assets/toys/toy8.jpg"
 import toy9 from "../../assets/toys/toy9.jpg"
 import { Link } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const Gallery = () => {
+    AOS.init({
+        duration: 2000,
+        delay: 100,
+      })
     return (
         <div className='mx-4'>
             <h1 className='text-center my-4 text-orange-600 text-2xl font-medium'>Featured Toy Gallery</h1>
             <p className='text-slate-800 w-5/6 mx-auto'>Step into our captivating Toy Gallery, a visual extravaganza that showcases a stunning collection of toys from various genres and eras. Immerse yourself in a wonderland of play, where imagination knows no bounds. Discover meticulously crafted action figures, enchanting dolls, intricate playsets, and more, each telling its own unique story.</p>
             <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-1 gap-4'>
-                <div className="card mx-auto w-96 bg-base-100 shadow-xl my-4">
+                <div data-aos="fade-up-right" className="card mx-auto w-96 bg-base-100 shadow-xl my-4">
                     <figure><img src={toy1}alt="toy" className='h-72 w-full' /></figure>
                     <div className="card-body">
                         <h2 className="card-title">
@@ -23,7 +29,7 @@ const Gallery = () => {
                         </h2>
                     </div>
                 </div>
-                <div className="card  mx-auto w-96 bg-base-100 shadow-xl my-4">
+                <div data-aos="zoom-in-right" className="card  mx-auto w-96 bg-base-100 shadow-xl my-4">
                     <figure><img src={toy2}alt="toy" className='h-72 w-full' /></figure>
                     <div className="card-body">
                         <h2 className="card-title">
@@ -31,7 +37,7 @@ const Gallery = () => {
                         </h2>
                     </div>
                 </div>
-                <div className="card w-96  mx-auto bg-base-100 shadow-xl my-4">
+                <div data-aos="zoom-out-right" className="card w-96  mx-auto bg-base-100 shadow-xl my-4">
                     <figure><img src={toy3}alt="toy" className='h-72 w-full' /></figure>
                     <div className="card-body">
                         <h2 className="card-title">
@@ -39,7 +45,7 @@ const Gallery = () => {
                         </h2>
                     </div>
                 </div>
-                <div className="card w-96  mx-auto bg-base-100 shadow-xl my-4">
+                <div data-aos="fade-down-right" className="card w-96  mx-auto bg-base-100 shadow-xl my-4">
                     <figure><img src={toy4}alt="toy"  className='h-72 w-full' /></figure>
                     <div className="card-body">
                         <h2 className="card-title">
@@ -47,7 +53,7 @@ const Gallery = () => {
                         </h2>
                     </div>
                 </div>
-                <div className="card w-96  mx-auto bg-base-100 shadow-xl my-4">
+                <div data-aos="zoom-out-left" className="card w-96  mx-auto bg-base-100 shadow-xl my-4">
                     <figure><img src={toy5}alt="toy" className='h-72 w-full' /></figure>
                     <div className="card-body">
                         <h2 className="card-title">
@@ -55,7 +61,7 @@ const Gallery = () => {
                         </h2>
                     </div>
                 </div>
-                <div className="card w-96  mx-auto bg-base-100 shadow-xl my-4">
+                <div data-aos="zoom-in-right" className="card w-96  mx-auto bg-base-100 shadow-xl my-4">
                     <figure><img src={toy6}alt="toy" className='h-72 w-full' /></figure>
                     <div className="card-body">
                         <h2 className="card-title">
@@ -63,7 +69,7 @@ const Gallery = () => {
                         </h2>
                     </div>
                 </div>
-                <div className="card w-96  mx-auto bg-base-100 shadow-xl my-4">
+                <div data-aos="fade-up-right" className="card w-96  mx-auto bg-base-100 shadow-xl my-4">
                     <figure><img src={toy7}alt="toy" className='h-72 w-full' /></figure>
                     <div className="card-body">
                         <h2 className="card-title">
@@ -71,7 +77,7 @@ const Gallery = () => {
                         </h2>
                     </div>
                 </div>
-                <div className="card w-96  mx-auto bg-base-100 shadow-xl my-4">
+                <div data-aos="zoom-in-up" className="card w-96  mx-auto bg-base-100 shadow-xl my-4">
                     <figure><img src={toy8}alt="toy" className='h-72 w-full' /></figure>
                     <div className="card-body">
                         <h2 className="card-title">
@@ -79,7 +85,7 @@ const Gallery = () => {
                         </h2>
                     </div>
                 </div>
-                <div className="card w-96  mx-auto bg-base-100 shadow-xl my-4">
+                <div data-aos="fade-down-left" className="card w-96  mx-auto bg-base-100 shadow-xl my-4">
                     <figure><img src={toy9}alt="toy" className='h-72 w-full' /></figure>
                     <div className="card-body">
                         <h2 className="card-title">
