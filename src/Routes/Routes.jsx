@@ -13,6 +13,7 @@ import Profile from '../Pages/Profile';
 import PrivateRoute from './PrivateRoute';
 import ErrorPage from '../Pages/ErrorPage';
 import ToyDetails from '../Pages/ToyDetails';
+import UpdateToy from '../Pages/UpdateToy';
 
 
 
@@ -63,6 +64,11 @@ export const router = createBrowserRouter([
             {
                 path: "toy-details/:id",
                 element: <PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>
+            },
+            {
+                path: "update-toy/:id",
+                element: <PrivateRoute><UpdateToy></UpdateToy></PrivateRoute>,
+                loader: ({params})=>fetch(`http://localhost:5000/toy/${params.id}`)
             }
         ]
     }

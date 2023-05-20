@@ -26,9 +26,9 @@ const ShopByCategory = ({user}) => {
         <div>
             <h1 className='text-lg text-center'>Shop By Category</h1>
             <div className='text-center my-4'>
-                <button className={` p-3 rounded-t transition-colors duration-700 border-r ${activeTab === "Pretend Play" ? 'bg-[#BAD1C2] font-semibold' : 'bg-zinc-400'} `} onClick={() => setActiveTab("Pretend Play")}>Pretend Play Toys</button>
-                <button className={` p-3 rounded-t transition-colors duration-700 border-r ${activeTab === "Educational" ? 'bg-[#BAD1C2] font-semibold ' : 'bg-zinc-400'} `} onClick={() => setActiveTab("Educational")} >Educational Toys</button>
-                <button className={` p-3 rounded-t transition-colors duration-700 ${activeTab === "OutdoorToy" ? 'bg-[#BAD1C2] font-semibold' : 'bg-zinc-400'} `} onClick={() => setActiveTab("OutdoorToy")} >Outdoor Toys</button></div>
+                <button className={` p-3 w-40 rounded-tl-lg rounded-bl-lg transition-colors duration-700 border-r ${activeTab === "Pretend Play" ? 'bg-[#BAD1C2] font-semibold' : 'bg-zinc-400'} `} onClick={() => setActiveTab("Pretend Play")}>Pretend Play Toys</button>
+                <button className={` p-3 w-40  transition-colors duration-700 border-r ${activeTab === "Educational" ? 'bg-[#BAD1C2] font-semibold ' : 'bg-zinc-400'} `} onClick={() => setActiveTab("Educational")} >Educational Toys</button>
+                <button className={` p-3 w-40 rounded-tr-lg rounded-br-lg transition-colors duration-700 ${activeTab === "OutdoorToy" ? 'bg-[#BAD1C2] font-semibold' : 'bg-zinc-400'} `} onClick={() => setActiveTab("OutdoorToy")} >Outdoor Toys</button></div>
 
             <div className='grid lg:grid-cols-2 lg:gap-8 gap-4 grid-cols-1 mx-8 my-6'>
                 {toys.map(toy => <div key={toy._id}>

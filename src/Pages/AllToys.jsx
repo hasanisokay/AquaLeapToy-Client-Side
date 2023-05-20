@@ -114,7 +114,7 @@ const AllToys = () => {
                 <div className='text-center my-4'>
                     {
                         pageNumbers?.map(number => <button className={
-                            (currentPage === number ? "bg-yellow-500 btn ml-4 hover:bg-blue-500 border-0" : "btn ml-4")}
+                            (currentPage === number ? "bg-yellow-500 btn ml-4 btn-circle hover:bg-blue-500 border-0 w-12 h-12" : "btn-circle w-12 h-12 btn border-0 ml-4")}
                             onClick={() => setCurrentPage(number)}
                             key={number}>{number}</button>)
                     }

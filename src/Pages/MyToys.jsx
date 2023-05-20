@@ -7,15 +7,25 @@ import loadingJson from "../assets/jsonLottieFiles/loading.json"
 
 const MyToys = () => {
     document.title = "AquaLeapToy | MyToys"
+    const [sortType, setSortType] = useState(null)
     const {user} = useContext(AuthContext);
     const email = user.email;
     const [deleted, setDeleted] = useState(false);
     const [myToys, setMyToys] = useState([]);
     const [load, setLoad] = useState(false)
 
+    // useEffect(()=>{
+    //     fetch(`http://localhost:5000/myToys/${sortType}`)
+    //     .then(res=>res.json())
+    //     .then(data=>{
+    //         console.log(data);
+    //     })
+
+    // },[sortType])
+    
     useEffect(()=>{
         setLoad(true)
-        fetch(`http://localhost:5000/myToys?email=${email}`,{
+        fetch(`http://localhost:5000/myToys?email=${email}&sort=${sortType}`,{
             method: "GET",
             headers:{
                 "Content-Type":"application/json"
@@ -26,7 +36,7 @@ const MyToys = () => {
             setLoad(false)
             setMyToys(data)
         })
-    },[deleted])
+    },[deleted, sortType])
        
     if(load){
         return <div className='flex justify-center items-center flex-col'>
@@ -37,7 +47,13 @@ const MyToys = () => {
     return (
         <div >
             <h1 className='text-2xl text-center'>Added Toys: {myToys.length}</h1>
-            {myToys.map(toy=><SingleToyCard toy={toy} deleted={deleted} setDeleted={setDeleted} key={toy._id}/>)}            
+            <p>Sort by price: { sortType && (sortType ==="ascending" ? "Lowest First" : "Highest First")}</p>
+            <select className=" select select-info  max-w-xs" onChange={(e)=>setSortType(e.target.value)}>
+                        <option defaultValue={""}></option>
+                        <option value={"ascending"}>Lowest First</option>
+                        <option value={"descending"}>Highest First</option>
+                    </select>
+            {myToys.map(toy=> <SingleToyCard toy={toy} deleted={deleted} setDeleted={setDeleted} key={toy._id}></SingleToyCard>)}            
         </div>
     );
 };

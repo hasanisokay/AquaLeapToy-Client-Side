@@ -24,9 +24,9 @@ const AddAToy = () => {
         const photoURL = form.photoURL.value;
         const sellerName = form.sellerName.value;
         const email = form.email.value;
-        const price = form.price.value;
-        const rating = form.rating.value;
-        const quantity = form.quantity.value;
+        const price = parseInt(form.price.value);
+        const rating = parseInt(form.rating.value);
+        const quantity = parseInt(form.quantity.value);
         const description = form.description.value;
         const time = new Date()
         const category = selectedOption.map(select=>select.value)
