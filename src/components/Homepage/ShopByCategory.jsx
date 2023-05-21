@@ -9,10 +9,9 @@ const ShopByCategory = ({user}) => {
     const [toys, setToys] = useState([]);
     const [activeTab, setActiveTab] = useState("Pretend Play")
     AOS.init({
-        duration: 3000,
+        duration: 2000,
         delay: 100,
         easing: 'ease-in-sine',
-        
       })
     const handleToyDetails = (id) => {
         if(!user){

@@ -33,7 +33,7 @@ const Profile = () => {
                 <p>Phone Number: <span className='font-medium'>{user.phoneNumber ? user.phoneNumber : "Not Given"}</span></p>
                 { !user.emailVerified && <button className='btn mt-8' onClick={handleVarifyEmail}>Verify your Email</button>}
             </div>
-           <div> <img src={user.photoURL} className=' h-80 rounded' alt="profile photo" /></div>
+           <div className='rounded'> <img src={user.photoURL} className='h-80 rounded' alt="profile photo" /></div>
         </div>
     );
 };

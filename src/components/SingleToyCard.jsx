@@ -63,7 +63,7 @@ const SingleToyCard = ({ toy, setDeleted, deleted }) => {
                 <div>
                     <img src={photoURL} className='h-32 w-80 rounded' alt="" />
                 </div>
-                <div className='flex justify-between w-full items-center'>
+                <div className='flex lg:flex-row flex-col justify-between w-full items-center'>
                     <div>
                         <h2 className="font-medium">{toyName}</h2>
                         <p>Description: <span className='font-medium'>{description}</span></p>

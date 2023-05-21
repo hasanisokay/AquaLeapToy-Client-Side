@@ -78,7 +78,7 @@ const AddAToy = () => {
                     <label className="label">
                         <span className="label-text">Email</span>
                     </label>
-                    <input type="email" name='email' placeholder="Email" required defaultValue={user.email} className="input input-bordered" />
+                    <input type="email" name='email' placeholder="Email" disabled required defaultValue={user.email} className="input input-bordered" />
                 </div>
                 <div>
                 <label className="label">

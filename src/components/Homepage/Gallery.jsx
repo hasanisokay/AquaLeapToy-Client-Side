@@ -15,11 +15,9 @@ const Gallery = () => {
     AOS.init({
         duration: 2000,
         delay: 100,
-        easing: 'ease-in-sine',
-        
       })
     return (
-        <div className='mx-4'>
+        <div className='mx-4 overflow-hidden'>
             <h1 className='font-semibold text-2xl text-transparent text-center bg-clip-text bg-gradient-to-r from-cyan-800 via-orange-700 to-red-950'>Featured Toy Gallery</h1>
             <p className='text-slate-800 w-5/6 mx-auto'>Step into our captivating Toy Gallery, a visual extravaganza that showcases a stunning collection of toys from various genres and eras. Immerse yourself in a wonderland of play, where imagination knows no bounds. Discover meticulously crafted action figures, enchanting dolls, intricate playsets, and more, each telling its own unique story.</p>
             <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-1 gap-4'>
