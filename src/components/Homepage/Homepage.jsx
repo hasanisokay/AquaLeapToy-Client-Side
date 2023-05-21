@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Autoplay, EffectCube, EffectFade } from 'swiper';
+import SwiperCore, { Autoplay, EffectCube} from 'swiper';
 SwiperCore.use([Autoplay]);
 SwiperCore.use([EffectCube]);
 import 'swiper/css/effect-cube';

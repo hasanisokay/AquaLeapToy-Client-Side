@@ -40,7 +40,7 @@ const ShopByCategory = ({user}) => {
             <div className='grid lg:grid-cols-2 lg:gap-8 gap-4 grid-cols-1 mx-8 my-6'>
                 {toys.map(toy => <div key={toy._id}>
                     <div className="card card-compact w-[80%] mx-auto rounded-lg  bg-gradient-to-r from-slate-300  via-gray-300 to-orange-300 shadow-2xl">
-                        <img data-aos="zoom-in-left" src={toy.photoURL} alt="toy" className='h-64 w-full' />
+                        <img src={toy.photoURL} alt="toy" className='h-64 w-full' />
                         <div className='card-body' data-aos="flip-up">
                         <div>
                             <h2>Name: <span className='font-medium'>{toy.toyName}</span></h2>
