@@ -20,6 +20,7 @@ import ShopByCategory from './ShopByCategory';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import ToyGuides from '../../Pages/ToyGuides';
 import CustomerReview from '../../Pages/CustomerReview';
+import PinnedBlogs from '../../Pages/PinnedBlogs';
 
 const Homepage = () => {
     const {user} = useContext(AuthContext);
@@ -142,6 +143,7 @@ const Homepage = () => {
             <ShopByCategory user={user}></ShopByCategory>
             <ToyGuides></ToyGuides>
             <CustomerReview></CustomerReview>
+            <PinnedBlogs></PinnedBlogs>
         </>
     );
 };
