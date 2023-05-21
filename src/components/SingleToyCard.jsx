@@ -63,7 +63,7 @@ const SingleToyCard = ({ toy, setDeleted, deleted }) => {
                 <div>
                     <img src={photoURL} className='h-32 w-80 rounded' alt="" />
                 </div>
-                <div className='flex lg:flex-row flex-col justify-between w-full items-center'>
+                <div className='flex lg:flex-row flex-col justify-between w-full lg:items-center'>
                     <div>
                         <h2 className="font-medium">{toyName}</h2>
                         <p>Description: <span className='font-medium'>{description}</span></p>
@@ -71,8 +71,8 @@ const SingleToyCard = ({ toy, setDeleted, deleted }) => {
                         <p>Price: <span className='font-medium'>{price}</span></p>
                         <p>Rating: <span className='font-medium'>{rating}</span></p>
                     </div>
-                    <div className='flex flex-col gap-4 items-center justify-center'>
-                        <label htmlFor="my-modal-6" className='btn btn-sm bg-[#5dbea3] hover:bg-cyan-500 border-0' onClick={()=>handleUpdate(toy)} >Update</label>
+                    <div className='flex lg:flex-col flex-row gap-4'>
+                        <button className='btn btn-sm bg-[#5dbea3] hover:bg-cyan-500 border-0' onClick={()=>handleUpdate(toy)} >Update</button>
                         <button onClick={() => handleDelete(_id)} className='btn btn-sm bg-[#ffbd03] border-0 hover:bg-red-500'>Delete</button>
                     </div>
                 </div>

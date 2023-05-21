@@ -13,15 +13,6 @@ const MyToys = () => {
     const [deleted, setDeleted] = useState(false);
     const [myToys, setMyToys] = useState([]);
     const [load, setLoad] = useState(false)
-
-    // useEffect(()=>{
-    //     fetch(`https://toy-market-server-8mjxd70mo-hasanisokay.vercel.app/myToys/${sortType}`)
-    //     .then(res=>res.json())
-    //     .then(data=>{
-    //         console.log(data);
-    //     })
-
-    // },[sortType])
     
     useEffect(()=>{
         setLoad(true)
