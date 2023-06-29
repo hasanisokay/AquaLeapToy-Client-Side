@@ -1,4 +1,4 @@
-# b7a11-toy-marketplace-client-side-hasanisokay
+# AquaLeapToy
 ..
     	<h1>Live link Click [here](https://toy-market-e46f7.web.app/)</h1>
     <h3>Features </h3>
